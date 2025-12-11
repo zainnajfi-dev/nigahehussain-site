@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Custom color tokens for Nigah e Hussain branding */
+  --teal-600: #1e5a5a;
+  --teal-700: #133f3f;
+  --teal-50: #e8f4f4;
+  --teal-25: #f0f8f8;
+  --cyan-200: #a8d4d4;
+  --text-default: #153c3c;
+  --gold: #d4af37;
+
+  --background: #f8fafb;
+  --foreground: var(--text-default);
+  --card: #ffffff;
+  --card-foreground: var(--text-default);
+  --primary: var(--teal-600);
+  --primary-foreground: #ffffff;
+  --secondary: var(--cyan-200);
+  --secondary-foreground: var(--teal-700);
+  --accent: var(--gold);
+  --accent-foreground: var(--teal-700);
+  --border: var(--teal-50);
+  --input: #ffffff;
+  --ring: var(--cyan-200);
+  --radius: 0.5rem;
+
+  --chart-1: var(--teal-600);
+  --chart-2: var(--cyan-200);
+  --chart-3: var(--gold);
+  --chart-4: var(--teal-50);
+  --chart-5: var(--text-default);
+}
+
+.dark {
+  --background: var(--teal-700);
+  --foreground: #ffffff;
+  --card: #1a4d4d;
+  --card-foreground: #ffffff;
+  --primary: var(--cyan-200);
+  --primary-foreground: var(--teal-700);
+  --secondary: var(--teal-600);
+  --secondary-foreground: #ffffff;
+  --accent: var(--gold);
+  --accent-foreground: var(--teal-700);
+  --border: var(--teal-600);
+  --input: #1a4d4d;
+  --ring: var(--cyan-200);
+}
+
+@theme inline {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "Geist Mono", monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.145 0 0);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: oklch(0.97 0 0);
+  --color-muted-foreground: oklch(0.556 0 0);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-destructive-foreground: oklch(0.577 0.245 27.325);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: var(--radius);
+  --radius-xl: 0.75rem;
+  --color-sidebar: oklch(0.985 0 0);
+  --color-sidebar-foreground: oklch(0.145 0 0);
+  --color-sidebar-primary: oklch(0.205 0 0);
+  --color-sidebar-primary-foreground: oklch(0.985 0 0);
+  --color-sidebar-accent: oklch(0.97 0 0);
+  --color-sidebar-accent-foreground: oklch(0.205 0 0);
+  --color-sidebar-border: oklch(0.922 0 0);
+  --color-sidebar-ring: oklch(0.708 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
